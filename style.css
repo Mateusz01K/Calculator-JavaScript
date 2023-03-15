@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    width: 400px;
+    height: 500px;
+    margin-top: 10%;
+    -webkit-box-shadow: 8px 8px 66px 5px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 66px 5px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 66px 5px rgba(66, 68, 90, 1);
+    color: white;
+}
+
+.previousNumber{
+    font-size: 20px;
+}
+
+.mathSign{
+    font-size: 22px;
+}
+
+.currentNumber{
+    font-size: 35px;
+}
+
+.display{
+    min-height: 20%;
+    max-height: min-content;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    word-break: break-all;
+    justify-content: space-between;
+}
+
+.panel{
+    display: grid;
+    height: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2px;
+}
+
+.panel button{
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.466);
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.panel button:hover{
+    background-color: rgba(0,0,0,0.546);
+}
+
+.equals{
+    grid-column: -2/-1;
+    grid-row: -1/-3;
+}
